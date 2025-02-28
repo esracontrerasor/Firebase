@@ -40,6 +40,16 @@ class Task {
       throw new Error("Error al actualizar la tarea");
     }
   }
+
+   // Eliminar tarea
+   static async delete(id) {
+    try {
+      await db.collection('tasks').doc(id).delete();
+      return { id };
+    } catch (error) {
+      throw new Error("Error al eliminar la tarea");
+    }
+  }
 }
 
 module.exports = Task;

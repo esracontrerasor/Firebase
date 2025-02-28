@@ -39,3 +39,13 @@ exports.updateTask = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// Función para eliminar una tarea
+exports.deleteTask = async (req, res) => {
+  try {
+    const deletedTask = await Task.delete(req.params.id);
+    res.status(200).json({ message: 'Tarea eliminada', deletedTask });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
