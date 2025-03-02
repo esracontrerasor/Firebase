@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "app.js"
+    "start": "app.js"
   },
   "keywords": [],
   "author": "",
